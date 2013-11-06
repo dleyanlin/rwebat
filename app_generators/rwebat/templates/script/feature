@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'rubigen'
+
+if %w(-v --version).include? ARGV.first
+  require "rwebta"
+  puts "#{File.basename($0)} #{Rwebta::VERSION}"
+  exit(0)
+end
+puts File.join(File.dirname(__FILE__), "..")
+require 'rubigen/scripts/generate'
+RubiGen::Base.use_application_sources! :rubygems
+RubiGen::Base.prepend_sources(*[ 
+  RubiGen::PathSource.new(:app, File.join(File.dirname(__FILE__), "..", "app_generators")),
+  RubiGen::PathSource.new(:app, File.join(File.dirname(__FILE__), "..", "feature_generators")),
+])
+RubiGen::Scripts::Generate.new.run(ARGV, :generator => 'feature')

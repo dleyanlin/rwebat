@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+APP_ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+puts APP_ROOT
+requires = %w(irb/completion watir/irb-history init/site_start pp)
+puts "Type 'irb START' at the prompt."
+exec "irb.bat -I #{APP_ROOT}/lib -r #{requires.join " -r "} --simple-prompt --readline"

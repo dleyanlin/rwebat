@@ -1,0 +1,15 @@
+require 'cucumber'
+require 'cucumber/rake/task'
+
+
+desc "Test Google Search"
+Cucumber::Rake::Task.new(:search) do |t|
+  t.cucumber_opts ="search.feature -r step_Definitions/search_step.rb --format html --out test_result/001.html"
+end
+
+desc "Test Google Search2"
+Cucumber::Rake::Task.new(:google) do |t|
+  t.cucumber_opts ="googlehome.feature -r step_Definitions/googlehome_step.rb --format html --out test_result/002.html"
+end
+
+task :default => :search
