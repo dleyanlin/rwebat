@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../lib/rwebat'
 
-visit('boeing17975.qa.webex.com',"ie")
-#visit('boeingld.qa.webex.com','chrome')
+visit('www.google.com',"ie")
+
 if is_webdriver?
    puts "webdriver:yes"
 else

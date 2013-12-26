@@ -1,4 +1,3 @@
-
 require 'rake'
 require 'rake/testtask'
 require 'rake/clean'
@@ -14,8 +13,8 @@ spec = Gem::Specification.new do |s|
   s.summary = "A TA framework for web application"
   s.description = "Executable automation accept testing for web applications"
   s.platform = Gem::Platform::RUBY
-  s.author = "PSOQA"
-  s.email   = "pso-qa@hz.webex.com"
+  s.author = "drewz"
+  s.email   = ""
   s.autorequire = 'rwebta'
   s.executables = ['rwebta']
   s.default_executable = 'rwebta'
