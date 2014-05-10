@@ -1,7 +1,7 @@
 Before do
   $option ="ie"  #firefox ie chrome
-  $hub_s = "http://10.224.203.96:4444/wd/hub"
-  $siteurl = "dbld.qa.webex.com"
+  $hub_s = "http://XX.XX.XX.XX:4444/wd/hub"
+  $siteurl = "www.google.com"
 end
 
 After do
