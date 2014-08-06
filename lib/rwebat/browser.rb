@@ -60,7 +60,7 @@ module Rwebat
     end
     private :new_browser
    
-    #remote serve IP params: "remote_s" example http://10.224.203.96:4444/wd/hub
+    #remote serve IP params: "remote_s" example http://XX.XX.XX.XX:4444/wd/hub
     def visit(url, option='ie',remote_s=nil)
         new_browser(option,remote_s)
         goto_url(url)
